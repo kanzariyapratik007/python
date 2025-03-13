@@ -1,3 +1,4 @@
+#list function
 a=[1,2,3,4,5,6]
 b=['prtik','satish','vishal']
 print (a+b)#concetition
