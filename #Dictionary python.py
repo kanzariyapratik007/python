@@ -16,3 +16,6 @@ for key,values in b.items():
     print (key,values,sep=" = ")
     b["id"]=50 #update
     print (b)
+ a1=a.copy() #copy       
+    
+    
