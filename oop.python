@@ -1,0 +1,19 @@
+class a:
+    "radhe radhe"#docment kahevay ane print krva mate( a.__doc__ )vapray
+    age=19
+    print (age)
+    def fun(self,age,name,address):
+        print (age,"",name,"",address)
+class b:
+    def __init__(self,id,vlue,surename):#constructor 
+        print (id,"",vlue,"",surename)
+
+           
+        
+d1=b("radhe",22,"kanzariya")#constructor dayrak coll thay jay
+w1=a()
+w1.fun(22,"pratik","rajkot")
+print(w1.age)
+print(a.age)
+print (a.__doc__)
+
