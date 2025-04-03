@@ -1,9 +1,10 @@
 class emp:
-    def __init__(self,name,salary):
+    def __init__(self,name,salary,size):
         self.name=name
         self.salary=salary
+        self.size=size
     def __str__(self):
-        return f"'{self.name}' by {self.salary}"
+        return f"'{self.name}' by {self.salary} by {self.size}"
 class dev:
     def __init__(self):
         self.emp=[]
@@ -17,7 +18,7 @@ class dev:
         self.emp.append(intern)
         print(f"employee'{intern.name}' name")
 def main():
-    oop=emp()
+    oop=dev()
     while True:
         print("\nemp manjment system")
         print("1. Add emp name")
@@ -26,25 +27,28 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == "1":
-           name = input("Enter Name: ")
-           size = int(input("Enter size: "))
-           salary = float(input("Enter Salary: "))
-           oop.add_emp(name, size, salary)
+           name = input("Enter emp Name: ")
+           size = int(input("Enter emp size: "))
+           salary = int(input("Enter emp Salary: "))
+           employee = emp(name, salary, size)
+           oop.add_emp(employee)
 
-        elif choice == "1":
-           name = input("Enter Name: ")
-           size = int(input("Enter size: "))
-           salary = float(input("Enter Salary: "))
-           oop.add_dev(name, size, salary)   
+        elif choice == "2":
+           name = input("Enter dev Name: ")
+           size = int(input("Enter dev size: "))
+           salary = int(input("Enter dev Salary: "))
+           employee = emp(name, salary, size)
+           oop.add_dev(employee) 
         
-        elif choice == "1":
-           name = input("Enter Name: ")
-           size = int(input("Enter size: "))
-           salary = float(input("Enter Salary: "))
-           oop.add_int(name, size, salary)  
+        elif choice == "3":
+           name = input("Enter int Name: ")
+           size = int(input("Enter int size: "))
+           salary = int(input("Enter int Salary: "))
+           employee = emp(name, salary, size)
+           oop.add_int(employee)
 
         else:
-            print("Invalid choice, please try again.")  
+            print("sorry")  
 
 if __name__ == "__main__":
    main()             
